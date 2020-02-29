@@ -6,22 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>灵能传输 | CodeChong</title>
+  <title>Tag: 数论 | CodeChong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在游戏《星际争霸 II》中，高阶圣堂武士作为星灵的重要 AOE 单位，在游戏的中后期发挥着重要的作用，其技能”灵能风暴“可以消耗大量的灵能对一片区域内的敌军造成毁灭性的伤害。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="灵能传输">
-<meta property="og:url" content="http://yoursite.com/2020/02/18/%E7%81%B5%E8%83%BD%E4%BC%A0%E8%BE%93/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CodeChong">
+<meta property="og:url" content="http://yoursite.com/tags/%E6%95%B0%E8%AE%BA/index.html">
 <meta property="og:site_name" content="CodeChong">
-<meta property="og:description" content="在游戏《星际争霸 II》中，高阶圣堂武士作为星灵的重要 AOE 单位，在游戏的中后期发挥着重要的作用，其技能”灵能风暴“可以消耗大量的灵能对一片区域内的敌军造成毁灭性的伤害。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-18T08:01:55.000Z">
-<meta property="article:modified_time" content="2020-02-18T08:45:09.381Z">
 <meta property="article:author" content="nichong">
-<meta property="article:tag" content="算法">
-<meta property="article:tag" content="蓝桥杯">
-<meta property="article:tag" content="前缀和">
-<meta property="article:tag" content="贪心">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="CodeChong" type="application/atom+xml">
@@ -164,138 +156,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-灵能传输" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      灵能传输
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/02/20/%E6%95%B0%E8%AE%BA/" class="archive-article-date">
+  	<time datetime="2020-02-20T02:37:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-20</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/20/%E6%95%B0%E8%AE%BA/">数论</a>
     </h1>
   
 
-        
-        <a href="/2020/02/18/%E7%81%B5%E8%83%BD%E4%BC%A0%E8%BE%93/" class="archive-article-date">
-  	<time datetime="2020-02-18T08:01:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在游戏《星际争霸 II》中，高阶圣堂武士作为星灵的重要 AOE 单位，在游戏的中后期发挥着重要的作用，其技能”灵能风暴“可以消耗大量的灵能对一片区域内的敌军造成毁灭性的伤害。</p>
-<a id="more"></a>
-<p>经常用于对抗人类的生化部队和虫族的刺蛇飞龙等低血量单位。</p>
-<p>你控制着 n 名高阶圣堂武士，方便起见标为 1,2,⋅⋅⋅,n。</p>
-<p>每名高阶圣堂武士需要一定的灵能来战斗，每个人有一个灵能值 ai 表示其拥有的灵能的多少（ai 非负表示这名高阶圣堂武士比在最佳状态下多余了 ai 点灵能，ai 为负则表示这名高阶圣堂武士还需要 −ai 点灵能才能到达最佳战斗状态）。</p>
-<p>现在系统赋予了你的高阶圣堂武士一个能力，传递灵能，每次你可以选择一个 i∈[2,n−1]，若 ai≥0 则其两旁的高阶圣堂武士，也就是 i−1、i+1 这两名高阶圣堂武士会从 i 这名高阶圣堂武士这里各抽取 ai 点灵能；若 ai&lt;0 则其两旁的高阶圣堂武士，也就是 i−1,i+1 这两名高阶圣堂武士会给 i 这名高阶圣堂武士 −ai 点灵能。</p>
-<p>形式化来讲就是 ai−1+=ai,ai+1+=ai,ai−=2ai。</p>
-<p>灵能是非常高效的作战工具，同时也非常危险且不稳定，一位高阶圣堂武士拥有的灵能过多或者过少都不好，定义一组高阶圣堂武士的不稳定度为 maxni=1|ai|，请你通过不限次数的传递灵能操作使得你控制的这一组高阶圣堂武士的不稳定度最小。</p>
-<p>输入格式<br>本题包含多组询问。输入的第一行包含一个正整数 T 表示询问组数。</p>
-<p>接下来依次输入每一组询问。</p>
-<p>每组询问的第一行包含一个正整数 n，表示高阶圣堂武士的数量。</p>
-<p>接下来一行包含 n 个数 a1,a2,⋅⋅⋅,an。</p>
-<p>输出格式<br>输出 T 行。</p>
-<p>每行一个整数依次表示每组询问的答案。</p>
-<p>数据范围<br>1≤T≤3,3≤n≤300000,|ai|≤109,<br>输入样例1：</p>
-<p>3<br>3<br>5 -2 3<br>4<br>0 0 0 0<br>3<br>1 2 3</p>
-<p>输出样例1：<br>3<br>0<br>3<br>输入样例2：<br>3<br>4<br>-1 -2 -3 7<br>4<br>2 3 4 -8<br>5<br>-1 -1 6 -1 -1<br>输出样例2：<br>5<br>7<br>4<br>样例解释<br>样例一<br>对于第一组询问：<br>对 2 号高阶圣堂武士进行传输操作后 a1=3，a2=2，a3=1。答案为 3。<br>对于第二组询问：<br>这一组高阶圣堂武士拥有的灵能都正好可以让他们达到最佳战斗状态。  </p>
-<h3 id="算法："><a href="#算法：" class="headerlink" title="算法："></a>算法：</h3><ul>
-<li>前缀和</li>
-<li>排序</li>
-<li>贪心</li>
-<li>只涉及到排序的时间， 所以时间复杂度为　O(n<sup>2</sup>)    </li>
-</ul>
-<h3 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h3><p>该题主要是要求求在所有高阶圣堂武士灵能值尽可能小的情况下，求出最大值。由分析可得，每个武士的灵能值可由前缀和求出，让值相邻的前缀和靠在一起，这样总的就会越小。<br><strong>1.对于ai有</strong><br>　　改变一次ai仅仅会影响到s[i]和s[i-1]，这意味着除了s[0]和s[n]以外[1,n)的任何s[i]都可以随意进行交换，得到一个值有序的序列。而a[i] = s[i] - s[i-1]。如果s[0]和s[n]也可以正常进行交换的话，那么这题的推导到这步就结束了，我们可以通过直接计算max(s[i] - s[i-1])的值来求出最大值<br>但问题在于s[0],s[n]是不可以进行移动的，即我们最终得到的序列不一定是单调的，所以我们接下来还要来解决不单调序列的问题。<br><strong>2.通过上述分析可以明确想要求得本题的最优解让序列尽可能单调</strong><br>通过画图可知一个有两个拐点的曲线重叠部分最小的时候，单调部分最多，一个曲线要符合下列要求：<br>(1)左边的端点要在右边端点的下面，即s[0] &lt; s[n]  </p>
-<pre><code class="c++"><span class="comment">//所以在记录s0和sn的值得时候，需要进行一次特判</span>
-<span class="keyword">if</span> (s[<span class="number">0</span>] &lt; s[n])
-    swap(s[<span class="number">0</span>] , s[n]);  </code></pre>
-<p>(2)极小值在极大值左边<br>因为它们是有可能相同的，所以我们在后续取点的时候s[0]从左开始取，s[n]从右开始取      </p>
-<p>本题的数据有可能爆int，所以要使用long long  </p>
-<p><font size = 4><strong>c++代码</strong></font>   </p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span>
-
-<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
-<span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;
-<span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">300010</span>;
-LL s[N],a[N];
-<span class="keyword">bool</span> st[N];
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>{
-    <span class="keyword">int</span> T;
-    <span class="keyword">int</span> n;
-    <span class="built_in">cin</span> &gt;&gt; T;
-    <span class="keyword">while</span> (T--)
-    {
-        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);
-        s[<span class="number">0</span>] = <span class="number">0</span>;
-        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= n; i++)
-        {
-            <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a[i]);
-            s[i] = s[i<span class="number">-1</span>] + a[i];
-        }
-        LL s0 = s[<span class="number">0</span>], sn = s[n];
-        <span class="keyword">if</span> (s0 &gt; sn)
-            swap(s0,sn);
-        sort(s,s+n+<span class="number">1</span>);
-        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= n ; i++)
-        {
-            <span class="keyword">if</span> (s[i] == s0)
-            {
-                s0 = i;
-                <span class="keyword">break</span>;
-            }
-        }
-        <span class="keyword">for</span> (<span class="keyword">int</span> i = n ; i &gt;= <span class="number">0</span>; i--)
-        {
-            <span class="keyword">if</span> (s[i] == sn)
-            {
-                sn = i;
-                <span class="keyword">break</span>;
-            }
-        }
-        <span class="built_in">memset</span>(st , <span class="number">0</span> , <span class="keyword">sizeof</span> st);
-        <span class="keyword">int</span> l = <span class="number">0</span> , r = n;
-        <span class="keyword">for</span> (<span class="keyword">int</span> i = s0 ; i &gt;= <span class="number">0</span> ; i -=<span class="number">2</span>)
-        {
-            a[l++] = s[i];
-            st[i] = <span class="literal">true</span>;
-        }
-        <span class="keyword">for</span> (<span class="keyword">int</span> i = sn ; i &lt;= n ; i += <span class="number">2</span>)
-        {
-            a[r--] = s[i];
-            st[i] = <span class="literal">true</span>;
-        }
-        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= n;i++)
-        {
-            <span class="keyword">if</span> (!st[i])
-            {
-                a[l++] = s[i];
-            }
-        }
-        LL res = <span class="number">0</span>;
-        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n ; i ++)
-        {
-            res = <span class="built_in">max</span>(res,<span class="built_in">abs</span>(a[i]-a[i<span class="number">-1</span>]));
-        }
-        <span class="built_in">cout</span> &lt;&lt; res &lt;&lt; <span class="built_in">endl</span>;
-
-    }
-        <span class="keyword">return</span> <span class="number">0</span>;
-}</code></pre>
-<p><a href = "https://www.acwing.com/problem/content/1250/" target="_blank">原题链接</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -305,142 +195,25 @@ LL s[N],a[N];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">蓝桥杯</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">前缀和</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/18/%E7%81%B5%E8%83%BD%E4%BC%A0%E8%BE%93/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/02/20/%E6%95%B0%E8%AE%BA/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数论
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/02/17/%E9%95%BF%E9%9A%BE%E5%8F%A5-01/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">长难句 01</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法："><span class="toc-number">1.</span> <span class="toc-text">算法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总体思路"><span class="toc-number">2.</span> <span class="toc-text">总体思路</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -467,9 +240,9 @@ LL s[N],a[N];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
